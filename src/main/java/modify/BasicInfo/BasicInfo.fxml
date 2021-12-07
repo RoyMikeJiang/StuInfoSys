@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="modify.BasicInfo.BasicInfo"
+            prefHeight="400.0" prefWidth="600.0"
+            stylesheets="@BasicInfo.css"
+>
+<children>
+    <HBox spacing="10" alignment="center" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20">
+        <Label text="学号："/>
+        <TextField fx:id="StudentIdSearchField"/>
+        <Label text="姓名："/>
+        <TextField fx:id="NameSearchField"/>
+        <Label text="       "/>
+        <Button fx:id="SearchButton" text="查询" onAction="#search"/>
+    </HBox>
+    <TableView fx:id="tableView" AnchorPane.topAnchor="50" AnchorPane.leftAnchor="20" prefHeight="150.0" >
+    <columns>
+        <TableColumn prefWidth="150.0" text="学号" fx:id="StudentId"/>
+        <TableColumn prefWidth="75.0" text="姓名" fx:id="Name"/>
+        <TableColumn prefWidth="75.0" text="性别" fx:id="Gender"/>
+        <TableColumn prefWidth="75.0" text="民族" fx:id="Nationality"/>
+        <TableColumn prefWidth="75.0" text="出生日期" fx:id="BirthDate"/>
+        <TableColumn prefWidth="75.0" text="班级" fx:id="Class"/>
+        <TableColumn prefWidth="150.0" text="备注" fx:id="Note"/>
+    </columns>
+    </TableView>
+    <GridPane fx:id="gridPane" alignment="center" hgap="10" vgap="10" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="200">
+        <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+        <Label text="学号：" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="StudentIdField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="姓名：" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <TextField fx:id="NameField" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+        <Label text="性别：" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <HBox spacing="10" alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <children>
+                <RadioButton text="男" fx:id="MaleRadioButton">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="GenderRadioButton"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton text="女" fx:id="FemaleRadioButton" toggleGroup="$GenderRadioButton"/>
+            </children>
+        </HBox>
+        <Label text="民族：" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <TextField fx:id="NationalityField" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        <Label text="出生日期：" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <DatePicker fx:id="BirthDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label text="班级：" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        <Label text="备注：" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="NoteField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button fx:id="DeleteButton" text="删除记录" onAction="#Delete" disable="true"/>
+            <Button fx:id="SubmitButton" text="提交修改" onAction="#Submit" disable="true"/>
+        </HBox>
+    </GridPane>
+</children>
+</AnchorPane>

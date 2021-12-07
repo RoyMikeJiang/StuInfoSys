@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="dataimport.DetailInfo.DetailInfo"
+            prefHeight="400.0" prefWidth="600.0"
+            fx:id="anchorPane"
+>
+    <children>
+        <Label text="请选择具体信息导入文件，格式请参考导入模板2" AnchorPane.leftAnchor="30" AnchorPane.topAnchor="50"/>
+        <Button fx:id="ReferenceButton" prefWidth="100.0" text="打开参考文件夹" AnchorPane.leftAnchor="350" AnchorPane.topAnchor="45" onAction="#OpenRefDir"/>
+        <Label text="文件地址：" AnchorPane.leftAnchor="30" AnchorPane.topAnchor="90"/>
+        <Label fx:id="FilePathLabel" AnchorPane.topAnchor="90" AnchorPane.leftAnchor="95"/>
+        <Button fx:id="BrowseButton" text="浏览文件" prefWidth="100.0" AnchorPane.leftAnchor="350" AnchorPane.topAnchor="120"/>
+        <Button fx:id="SubmitButton" text="提交" prefWidth="100.0" AnchorPane.leftAnchor="350" AnchorPane.topAnchor="150" disable="true" onAction="#Submit"/>
+        <Label text="运行结果：" AnchorPane.leftAnchor="30" AnchorPane.topAnchor="180"/>
+        <TextArea fx:id="ResultTextArea" prefWidth="500" prefHeight="200" AnchorPane.leftAnchor="30" AnchorPane.topAnchor="200" editable="false"/>
+    </children>
+</AnchorPane>

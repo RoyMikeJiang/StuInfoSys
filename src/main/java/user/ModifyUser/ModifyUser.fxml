@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="user.ModifyUser.ModifyUser"
+            prefHeight="400.0" prefWidth="600.0">
+<children>
+    <TableView fx:id="tableView" prefHeight="200.0" prefWidth="470.0" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="20">
+        <columns>
+            <TableColumn prefWidth="150.0" text="QQ号" fx:id="QQ"/>
+            <TableColumn prefWidth="150.0" text="等级" fx:id="Level"/>
+            <TableColumn prefWidth="150.0" text="姓名-职位" fx:id="Note"/>
+        </columns>
+    </TableView>
+    <GridPane fx:id="gridPane" alignment="center" hgap="10" vgap="10" AnchorPane.leftAnchor="120" AnchorPane.topAnchor="250">
+        <Label text="QQ：" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label fx:id="QQLabel" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="等级：" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Label text="姓名-职位：" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="NoteField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <HBox GridPane.columnIndex="1" GridPane.rowIndex="3" spacing="10" alignment="bottom_right">
+            <Button fx:id="DeleteButton" text="删除用户" onAction="#Delete" disable="true"/>
+            <Button fx:id="ModifyButton" text="修改信息" onAction="#Modify" disable="true"/>
+        </HBox>
+        </GridPane>
+</children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainview.MainViewController">
+    <children>
+        <BorderPane prefHeight="600.0" prefWidth="1000.0">
+            <left>
+                <TreeView fx:id="main_treeview" prefHeight="360.0" prefWidth="200.0" onMouseClicked="#mainTreeViewClick" BorderPane.alignment="TOP_LEFT" />
+            </left>
+            <center>
+                <AnchorPane fx:id="main_pane_under_scroll" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="590.0" prefWidth="800.0" />
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

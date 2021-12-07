@@ -1,0 +1,17 @@
+.title-text{
+    -fx-font-family: "SimSun-ExtB";
+    -fx-font-size: 30px;
+    -fx-font-weight: lighter;
+}
+
+.content-text{
+    -fx-font-family: "SimSun-ExtB";
+    -fx-font-size: 20px;
+    -fx-font-weight: normal;
+}
+
+.button{
+    -fx-font-family: "SimSun-ExtB";
+    -fx-font-size: 20px;
+    -fx-font-weight: lighter;
+}

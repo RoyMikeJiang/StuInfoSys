@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javax.print.DocFlavor.URL?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="login.LoginController"
+            prefHeight="600.0" prefWidth="1000.0"
+            stylesheets="@Login.css"
+>
+    <children>
+        <GridPane fx:id="gridPane" AnchorPane.topAnchor="200" AnchorPane.leftAnchor="300" alignment="center" hgap="10" vgap="10">
+            <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+            <Text id="welcome-text" text="欢迎使用学生信息管理系统"
+                  GridPane.columnIndex="0" GridPane.rowIndex="0"
+                  GridPane.columnSpan="2"
+                  styleClass="title-text"
+            />
+            <Label text="用户名："
+                   GridPane.columnIndex="0" GridPane.rowIndex="1"
+                   styleClass="content-text"
+            />
+            <TextField fx:id="login_username"
+                    GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label text="密码："
+                   GridPane.columnIndex="0" GridPane.rowIndex="2"
+                   styleClass="content-text"
+            />
+            <PasswordField fx:id="login_password"
+                           GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <HBox spacing="10" alignment="bottom_right"
+                  GridPane.columnIndex="1" GridPane.rowIndex="4">
+                <Button text="登录" fx:id="login_button"
+                    styleClass="button" onAction="#loginButtonClick"
+                />
+            </HBox>
+        </GridPane>
+    </children>
+
+</AnchorPane>

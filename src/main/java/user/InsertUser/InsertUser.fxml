@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="user.InsertUser.InsertUser"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <GridPane fx:id="gridPane" alignment="center" hgap="10" vgap="10">
+            <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+            <Label text="QQ号：" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="QQField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label text="等级：" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Label text="姓名-职务：" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="NoteField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Label fx:id="PasswordLabel" text="登录密码：" GridPane.columnIndex="0" GridPane.rowIndex="3" visible="false"/>
+            <TextField fx:id="PasswordField" GridPane.columnIndex="1" GridPane.rowIndex="3" visible="false"/>
+            <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                <Button fx:id="SubmitButton" text="提交" onAction="#Submit"/>
+            </HBox>
+        </GridPane>
+    </children>
+</AnchorPane>

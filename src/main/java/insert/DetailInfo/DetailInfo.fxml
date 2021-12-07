@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="insert.DetailInfo.DetailInfo"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <GridPane fx:id="gridPane" alignment="center" hgap="10" vgap="10">
+            <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+            <Label text="学号：" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="StudentIdField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label text="姓名：" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+            <TextField fx:id="NameField" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+            <Label text="寝室：" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="DormField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Label text="身份证号：" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField fx:id="IdField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Label text="生源地：" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <TextField fx:id="BirthPlaceField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            <Label text="手机号：" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+            <TextField fx:id="PhoneNumField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+            <Label text="政治面貌：" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+            <Label text="是否户口转移：" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+            <HBox spacing="10" alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                <children>
+                    <RadioButton text="是">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="HouseTransferRadioButton"/>
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton text="否" toggleGroup="$HouseTransferRadioButton"/>
+                </children>
+            </HBox>
+            <Label text="高中毕业学校：" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+            <TextField fx:id="SeniorSchoolField" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+            <Label text="父亲姓名：" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            <TextField fx:id="FatherNameField" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+            <Label text="父亲电话：" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+            <TextField fx:id="FatherPhoneField" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+            <Label text="父亲工作地址：" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+            <TextField fx:id="FatherWorkPlaceField" GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+            <Label text="父亲工作岗位：" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+            <TextField fx:id="FatherWorkPositionField" GridPane.columnIndex="3" GridPane.rowIndex="5"/>
+            <Label text="母亲姓名：" GridPane.columnIndex="2" GridPane.rowIndex="6"/>
+            <TextField fx:id="MotherNameField" GridPane.columnIndex="3" GridPane.rowIndex="6"/>
+            <Label text="母亲电话：" GridPane.columnIndex="2" GridPane.rowIndex="7"/>
+            <TextField fx:id="MotherPhoneField" GridPane.columnIndex="3" GridPane.rowIndex="7"/>
+            <Label text="母亲工作地址：" GridPane.columnIndex="2" GridPane.rowIndex="8"/>
+            <TextField fx:id="MotherWorkPlaceField" GridPane.columnIndex="3" GridPane.rowIndex="8"/>
+            <Label text="母亲工作岗位：" GridPane.columnIndex="2" GridPane.rowIndex="9"/>
+            <TextField fx:id="MotherWorkPositionField" GridPane.columnIndex="3" GridPane.rowIndex="9"/>
+            <Label text="家庭住址：" GridPane.columnIndex="2" GridPane.rowIndex="10"/>
+            <TextField fx:id="HomePlaceField" GridPane.columnIndex="3" GridPane.rowIndex="10"/>
+            <Label text="邮编：" GridPane.columnIndex="2" GridPane.rowIndex="11"/>
+            <TextField fx:id="PostCodeField" GridPane.columnIndex="3" GridPane.rowIndex="11"/>
+            <Label text="贫困等级" GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+            <Label text="备注：" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
+            <TextField fx:id="DetailNoteField" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+            <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="3" GridPane.rowIndex="12">
+                <Button fx:id="SubmitButton" text="提交" onAction="#Submit"/>
+            </HBox>
+        </GridPane>
+    </children>
+</AnchorPane>
