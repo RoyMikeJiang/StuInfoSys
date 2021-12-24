@@ -91,7 +91,7 @@ public class UserCenter implements Initializable {
             // Initialize the resultList
             List<Map<String, Object>> resultList = null;
             // Use the SearchUserInfo of the SQLConnection to query info in the userid table in the MYSQL
-            resultList = SQLConnection.GerUserInfo(StaticResourcesConfig.UserQQ);
+            resultList = SQLConnection.GetUserInfo(StaticResourcesConfig.UserQQ);
             FillData(new UserInfoData(resultList.get(0)));
         }catch(Exception e){
             // Raise the Error Alter to Notice the ERROR when Executing the SQL

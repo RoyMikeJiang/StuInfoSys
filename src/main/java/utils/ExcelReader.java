@@ -21,16 +21,19 @@ import org.junit.Ignore;
 @Ignore
 @Slf4j
 public class ExcelReader {
-    private static List<BasicInfoStruct> BISresultList = null;
-    private static List<DetailInfoStruct> DISresultList = null;
-    private static List<WorkInfoStruct> WISresultList = null;
+    private static String ResultString = "";
 
     public static String ImportBasicInfo(String path){
-        String ResultString = "";
-        EasyExcel.read(path, BasicInfoStruct.class , new PageReadListener<BasicInfoStruct>(dataList->{
-            BISresultList = dataList;
-        })).sheet().doRead();
-        for(BasicInfoStruct data : BISresultList){
+        ResultString = "";
+        EasyExcel.read(path, BasicInfoStruct.class , new PageReadListener<BasicInfoStruct>(ExcelReader::ImportBasicInfoHelp)).sheet().doRead();
+        if(ResultString.equals("")){
+            return "全部导入成功";
+        }
+        return ResultString;
+    }
+
+    public static void ImportBasicInfoHelp(List<BasicInfoStruct> dataList){
+        for(BasicInfoStruct data : dataList){
             try {
                 SQLConnection.InsertBasicInfo(data.getStudentId(),data.getName(),data.getGender(),data.getNationality(),
                         data.getBirthDate(),data.getPClass(),data.getNote());
@@ -42,19 +45,19 @@ public class ExcelReader {
                 ResultString = ResultString.concat(exceptionText);
             }
         }
-        BISresultList = null;
+    }
+
+    public static String ImportDetailInfo(String path){
+        ResultString = "";
+        EasyExcel.read(path, DetailInfoStruct.class , new PageReadListener<DetailInfoStruct>(ExcelReader::ImportDetailInfoHelp)).sheet().doRead();
         if(ResultString.equals("")){
             return "全部导入成功";
         }
         return ResultString;
     }
 
-    public static String ImportDetailInfo(String path){
-        String ResultString = "";
-        EasyExcel.read(path, DetailInfoStruct.class , new PageReadListener<DetailInfoStruct>(dataList->{
-            DISresultList = dataList;
-        })).sheet().doRead();
-        for(DetailInfoStruct data : DISresultList){
+    public static void ImportDetailInfoHelp(List<DetailInfoStruct> dataList){
+        for(DetailInfoStruct data : dataList){
             try {
                 SQLConnection.InsertDetailInfo(data.getStudentId(), data.getPName(), data.getDorm(), data.getId(), data.getBirthPlace(),
                         data.getPhoneNum(), data.getPolStatus(), data.getHouseholdTransfer(), data.getSeniorSchool(), data.getFatherName(),
@@ -68,19 +71,19 @@ public class ExcelReader {
                 ResultString = ResultString.concat(exceptionText);
             }
         }
-        DISresultList = null;
+    }
+
+    public static String ImportWorkInfo(String path){
+        ResultString = "";
+        EasyExcel.read(path, BasicInfoStruct.class , new PageReadListener<WorkInfoStruct>(ExcelReader::ImportWorkInfoHelp)).sheet().doRead();
         if(ResultString.equals("")){
             return "全部导入成功";
         }
         return ResultString;
     }
 
-    public static String ImportWorkInfo(String path){
-        String ResultString = "";
-        EasyExcel.read(path, BasicInfoStruct.class , new PageReadListener<WorkInfoStruct>(dataList->{
-            WISresultList = dataList;
-        })).sheet().doRead();
-        for(WorkInfoStruct data : WISresultList){
+    public static void ImportWorkInfoHelp(List<WorkInfoStruct> dataList){
+        for(WorkInfoStruct data : dataList){
             try {
                 SQLConnection.InsertClassWorkInfo(data.getStudentId(),data.getName(), data.getPClass(), data.getWork(), data.getDorm());
             }catch(Exception e){
@@ -91,10 +94,5 @@ public class ExcelReader {
                 ResultString = ResultString.concat(exceptionText);
             }
         }
-        WISresultList = null;
-        if(ResultString.equals("")){
-            return "全部导入成功";
-        }
-        return ResultString;
     }
 }

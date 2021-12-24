@@ -17,11 +17,11 @@ public final class StaticResourcesConfig {
     public final static String LOGIN_VIEW_PATH = "../login/login.fxml";
     public final static String MAIN_VIEW_PATH = "../mainview/MainView.fxml";
 
-    public static final String MYSQL_IP = "localhost";
-    public static final String MYSQL_PORT = "3306";
-    public static final String MYSQL_USER_NAME = "root";
-    public static final String MYSQL_USER_PASSWD = "PASSWORD";
-    public static final String MYSQL_DATABASE_NAME = "scu_cs_stu_info";
+    public static final String MYSQL_IP = "";
+    public static final String MYSQL_PORT = "";
+    public static final String MYSQL_USER_NAME = "";
+    public static final String MYSQL_USER_PASSWD = "";
+    public static final String MYSQL_DATABASE_NAME = "";
 
     public final static String MAIN_TREE_HEADER = "管理系统功能";
     public final static List<TreeViewListItem> MAIN_TREE_ITEM_LIST = Arrays.<TreeViewListItem>asList(

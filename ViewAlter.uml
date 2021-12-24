@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>viewalter.ViewAlter</OriginalElement>
+  <nodes>
+    <node x="132.25" y="0.0">javafx.application.Application</node>
+    <node x="0.0" y="428.0">viewalter.ViewAlter</node>
+    <node x="301.0" y="474.5">javafx.application.Application.Parameters</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="javafx.application.Application.Parameters" target="javafx.application.Application" relationship="INNER_CLASS">
+      <point x="0.0" y="-62.0" />
+      <point x="422.0" y="403.0" />
+      <point x="355.75" y="403.0" />
+      <point x="74.5" y="189.0" />
+    </edge>
+    <edge source="viewalter.ViewAlter" target="javafx.application.Application" relationship="GENERALIZATION">
+      <point x="0.0" y="-108.5" />
+      <point x="140.5" y="403.0" />
+      <point x="206.75" y="403.0" />
+      <point x="-74.5" y="189.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="271.5" y="322.5" />
+  <SelectedNodes>
+    <node>viewalter.ViewAlter</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

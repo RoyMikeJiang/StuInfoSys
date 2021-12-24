@@ -487,7 +487,7 @@ public final class SQLConnection {
         return true;
     }
 
-    public static List<Map<String, Object>> GerUserInfo(String QQ){
+    public static List<Map<String, Object>> GetUserInfo(String QQ){
         // Construct SQL to search in to userid
         String sql = String.format("SELECT * FROM userid WHERE QQ='%s'",QQ);
         // Initialize the resultList
